@@ -1,5 +1,7 @@
 :root{
     --maincolor: #ddd;
+    --bkColor1: #d7dfde;
+
 }
 
 body{
@@ -14,13 +16,6 @@ header {
     background-color: rgba(238, 238, 238, 0.329);
 }
 
-.section1{
-    display: flex;
-    background-color: #d7dfde;
-    justify-content: space-between;
-    padding: 15px;
-}
-
 aside{
     box-sizing: border-box;
     width: 200px;
@@ -31,6 +26,22 @@ aside{
     font-weight: bold;
     background-color: #4c98b667;
 }
+
+section{
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d7dfde;
+}
+
+section:nth-child(odd){
+    background-color: #d7dfde;
+}    
+
+section:nth-child(even){
+    background-color: #b0b9bd3b;
+}    
 
 .assign-1-shape-1 ,
 .assign-1-shape-2 ,
@@ -54,12 +65,14 @@ aside{
 .assign-2-shape-2 ,
 .assign-2-shape-3 ,
 .assign-2-shape-4 {
-    width:400px;
-    height:400px;
+    width:200px;
+    height:200px;
     background-image: url('css-assignment-5-8.png');
     color: white;
-    background-color: #EEE;
+    background-color: rgba(60, 81, 94, 0.459);
     display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 5px;
 }
 
 .assign-2-shape-1 {
@@ -79,11 +92,13 @@ aside{
 .assign-3-shape-3 ,
 .assign-3-shape-4 {
     background-image: url('css-assignment-5-8.png');
-    background-color: #EEE;
-    width: 400px;
-    height:400px;
+    background-color: rgba(60, 81, 94, 0.459);
+    width: 200px;
+    height:200px;
     color:white;
     display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 5px;
 }
 
 .assign-3-shape-1 {
@@ -105,12 +120,13 @@ aside{
 .assign-4-shape-3 ,
 .assign-4-shape-4 {
     background-image: url('css-assignment-5-8.png');
-    background-color: #EEE;
-    width: 400px;
-    height:400px;
+    background-color: rgba(60, 81, 94, 0.459);
+    width: 200px;
+    height:200px;
     color:white;
     display: inline-block;
     background-repeat: no-repeat;
+    margin-right: 5px;
 }
 
 .assign-4-shape-1 {
@@ -136,11 +152,12 @@ aside{
 .assign-5-1 ,
 .assign-5-2 ,
 .assign-5-3 {
-    display: inline-block;
+    height: fit-content;
     background-color: #EEE;
     outline: 5px solid #000;
     padding: 10px 20px ;
-    margin-right: 20px;
+    margin: 15px;
+    display: inline-block;
 }
 
 .assign-5-1 {
@@ -160,18 +177,16 @@ aside{
 .assign-6-1 ,
 .assign-6-2 ,
 .assign-6-3 {
-    width: 400px;
+    display: inline-block;
+    width: 200px;
+    height: fit-content;
     background-color: #EEE;
-    padding: 10px;
-}
-
-.assign-6-1 p {
     border-left: 5px solid rgb(247, 58, 130);
     padding: 10px;
 }
 
 .assign-6-2 {
- visibility: hidden;
+    visibility: hidden;
 }
 
 .assign-6-3 p{
@@ -179,6 +194,11 @@ aside{
     padding: 10px;
 }
 
+.Parent {
+    height: fit-content;
+    outline: 3px solid #000;
+    padding: 10px;
+}
 .parent .child .title {
     color: red;
 }
@@ -201,14 +221,14 @@ aside{
     padding: 20px;
     overflow:hidden;
 }
-
+/* // ////////////////////////////////////////////////////////////////////////// */
 .shadows {
     text-align: center;
     font-size: 42px;
     text-shadow:
-     1px 1px 0px red,
-     2px 2px 0px rgb(71, 71, 212),
-     3px 3px 0px rgb(153, 24, 136);
+    1px 1px 0px red,
+    2px 2px 0px rgb(71, 71, 212),
+    3px 3px 0px rgb(153, 24, 136);
 }
 
 .one ,
