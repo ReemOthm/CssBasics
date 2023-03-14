@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Demo Grid instead of Flex</title>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
+        html{
+            background-color: #fed0d1;
+        }
+
+        .all{
+            height: 100vh;
+            min-width: 360px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: "head" "div1" "div2" "div3" "foot";
+            gap: 20px ;
+        }
+
+        h1{
+            grid-area: head;
+            color: #f34a4e;
+            text-align: center;
+            font-size: 1.5rem;
+            margin-top: 40px;
+        }
+
+        .inside-div{
+            background-color: white;
+            color: #424346;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0px 1px 6px gray;
+        }
+
+        .one{
+            grid-area: div1;
+        }
+
+        .two{
+            grid-area: div2;
+        }
+
+        .three{
+            grid-area: div3;
+        }
+
+        .foot{
+            grid-area: foot;
+            text-align: center;
+            font-size: 1.3rem;
+            padding-bottom: 20px;
+        }
+
+        .foot a{
+            color: #f34a4e;
+            transition: all 0.275;
+            letter-spacing:  0.1em;
+            text-decoration: none;
+            border-bottom: 1px solid #f34a4e;
+        }
+
+        .foot a:focus,
+        .foot a:hover{
+            opacity: 0.8;
+            padding-bottom:4px;
+            border-bottom: 1px solid rgba(243 74 78, 5);
+        }
+
+        img{
+            margin: -20px -20px 10px ;
+            transition: all 0.275s;
+            width: -webkit-fill-available;
+        }
+
+        .inside-div a img:hover{
+            filter: blur(2px) grayscale(50%);
+        }
+
+        h2{
+            margin: 10px 0px;
+        }
+
+        .inside-div p{
+            letter-spacing: 1.6;
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+        }
+
+        .btn{
+            display: inline-block;
+            background-color: #f34a4e;
+            border-radius: 3px;
+            padding: 10px 15px;
+            color: white;
+            letter-spacing: 1px;
+            font-size: 11px;
+            text-decoration: none;
+        }
+
+        .btn:focus,
+        .btn:hover{
+            background-color: #fed0d1;
+            color: #f34a4e;
+        }
+
+        @media (min-width: 560px){
+            .all{
+                grid-template-columns: 1fr 1fr ;
+                grid-template-areas: "head head " "div1 div2" "div3 div3" "foot foot";
+            }
+
+        }
+
+        @media (min-width: 700px){
+            .all{
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                grid-template-areas: "head head head head head" " . div1 div2 div3 ." "foot foot foot foot foot ";
+            }
+
+            .btn{
+                position: absolute;
+                bottom: 20px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <section class="all">
+        
+        <h1>Same Column Height</h1>
+
+        <div class="inside-div one">
+            <a href="https://placekitten.com/450/300"><img src="https://placekitten.com/450/300" width="300px" height="200px" alt="cat image"></a>
+            <h2>A little title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur placeat, reiciendis temporibus commodi veritatis </p>
+            <a class="btn" href="#">READ MORE</a>
+        </div>
+
+        <div class="inside-div two">
+            <a href="https://placekitten.com/300/200"><img src="https://placekitten.com/300/200" width="300px" height="200px" alt="cat image"></a>
+            <h2>A little title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur elit. Pariatur placeat, reicien elit. Pariatur placeat, reicien adipisicing elit. Pariatur placeat, reiciendis temporibus commodi veritatis </p>
+            <a class="btn" href="#">READ MORE</a>
+        </div>
+        
+        <div class="inside-div three">
+            <a href="https://placekitten.com/600/400"><img src="https://placekitten.com/600/400" width="300px" height="200px" alt="cat image"></a>
+            <h2>A little title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur  elit. Pariatur placeat, reicien adipisicing elit. Pariatur placeat, reiciendis temporibus commodi veritatis </p>
+            <a class="btn" href="#">READ MORE</a>
+        </div>
+
+        <p class="foot"><a href="https://flexbox.ninja/demos/same-height-columns/demo.html#">Resource Page Exercise</a></p>
+
+    </section>
+    
+</body>
+</html>
