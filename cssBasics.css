@@ -28,10 +28,12 @@ body{
 }
 
 .aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
-    width: 200px;
-    height: 200px;
-    padding-top: 90px;
+    width: 150px;
+    height: 150px;
     text-align: center;
     border-radius: 50%;
     font-weight: bold;
@@ -43,7 +45,7 @@ body{
 section{
     display: flex;
     padding: 15px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     background-color: #d7dfde;
     flex-wrap: wrap;
@@ -61,6 +63,7 @@ section:nth-child(even){
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .assign-1-shape-1 ,
@@ -162,6 +165,7 @@ section:nth-child(even){
     display: inline-block;
     background-repeat: no-repeat;
     margin-right: 5px;
+    margin-bottom: 10px;
 }
 
 .assign-4-shape-1 {
@@ -322,7 +326,7 @@ a {
 }
 
 .allCalc {
-    width:900px;
+    width:600px;
     overflow: hidden;
     background-color: #eee;
     font-weight: bold;
@@ -461,6 +465,7 @@ table {
 table caption {
     font-weight: bold;
     padding-bottom: 15px;
+    margin-top: 15px;
 }
 table thead th {
     background-color: rgb(65, 65, 65);
@@ -488,7 +493,7 @@ table tbody td {
     height: 60px;
     background-color: #eee;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     margin-left: 60px;
     padding-top: 22px;
 }
@@ -579,7 +584,7 @@ table tbody td {
     text-align: center;
     border-radius: 50%;
     border: 2px solid black;
-    margin: 20px 0px 0px 40px;
+    margin: 20px 0px;
     position: relative;
     box-shadow: -6px -6px 0 0 #e91e63, 
         5px 5px 0 0 #03a9f4;
@@ -828,6 +833,7 @@ table tbody td {
     align-items:flex-end;
     justify-content: space-between;
     padding: 10px;
+    margin-bottom: 10px;
 }
 .assign-26 div {
     padding: 35px 10px;
@@ -878,14 +884,13 @@ table tbody td {
 
 .page{
     display: flex;
-    width: 800px;
+    width: 600px;
     height: 400px;
     background-color: #898989;
     flex-flow: column wrap;
     padding: 10px;
     justify-content: space-between; 
     margin-top: 10px;
-    margin-left: 380px;
 }
 .header{
     display: flex;
@@ -901,7 +906,7 @@ table tbody td {
 .links{
     box-sizing: border-box;
     list-style: none;
-    width: 690px;
+    width: 490px;
     margin: 0px;
     background-color: #ddd;
     padding-top: 15px;
@@ -922,10 +927,10 @@ table tbody td {
     padding: 10px;
 }
 .content{
-    width: 60%;
+    width: 55%;
 }
 .sidebar{
-    width: 34%;
+    width: 36%;
 }
 .footer{
     display: flex;
@@ -947,6 +952,7 @@ table tbody td {
     letter-spacing: 4.6px;
     font-size: 30px;
     position: relative;
+    margin-bottom: 20px;
 }
 .assign-28::first-letter{
     color: #f44336;
@@ -1019,11 +1025,10 @@ table tbody td {
     grid-template-areas: "header header" "section aside" "footer footer";
     grid-template-rows: 50px 1fr 50px;
     grid-template-columns: 1fr 300px;
-    width: 800px;
+    width: 600px;
     height: 300px;
     color: white;
     margin-top: 10px;
-    margin-left: 290px;
 }
 
 .assign-31 header{
@@ -1128,6 +1133,7 @@ table tbody td {
     gap: 20px ;
     grid-template-columns: repeat(2, auto);
     align-content: space-between;
+    margin-bottom: 10px;
 }
 .assign-34 div {
     background-color:#e91e63;
@@ -1224,6 +1230,7 @@ table tbody td {
     background-color: #FF5722;
     font-family: var(--times);
     z-index: 1;
+    margin-right: 80px;
 }
 
 .assign-37::before{
@@ -1259,7 +1266,6 @@ table tbody td {
     position: relative;
     text-align: center;
     font-family: var(--times);
-    top: -105px;
 }
 
 .assign-38::before{
@@ -1290,6 +1296,7 @@ table tbody td {
     background-color: #607d8b;
     border-bottom: 5px solid black;
     position: relative;
+    margin: 40px 0 0 20px;
 }
 
 .assign-39::before{
@@ -1360,7 +1367,9 @@ table tbody td {
     border-top-color: transparent;
     position: relative;
     box-sizing: border-box;
+    margin: 20px;
 }
+
 .assign-41::before{
     content: "";
     width: 63px;
@@ -1419,6 +1428,7 @@ table tbody td {
     border-bottom-color: transparent;
     position: relative;
     animation-duration: 3s;
+    margin: 20px;
 }
 
 .assign-42::before{
@@ -1477,6 +1487,7 @@ table tbody td {
     border: 5px solid #000;
     border-top-color: transparent;
     animation: spin3 1s infinite linear reverse;
+    margin: 20px;
 }
 
 @keyframes spin3{
